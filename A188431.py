@@ -62,10 +62,13 @@ def sequence_term(n):  # returns number of all n-full sets for a given number
 
 def prog():  # enter number of the terms to process
     n = int(input("Enter number of elements: "))
-    print(end="\n1, ")
+    print()
+    result = [1]
     for i in range(n):
         i+=1
-        print(sequence_term(i), end=", ")
+        result.append(sequence_term(i))
+    for i in range(n):
+        print(result[i],end=", ")
     print()
     return 0
 
